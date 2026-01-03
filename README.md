@@ -46,4 +46,4 @@
 2.  **迭代的重要性：** AI 並非一次完美，例如圖片載入失敗或動畫導致的空白問題，都需要透過「人」的判斷去指引 AI 修正。
 3.  **成就感：** 雖然過程中遇到 Bug，但看著作品從概念到上線只花了短時間，且成品具備專業感，這激勵了我未來更願意嘗試使用 AI 工具來實現創意。
 
-🔗 **儲存庫網址**:[//github.com/sarada0212/2025-Vibe-Coding-CHOU-TZU-YANG](https://github.com/sarada0212/2025-Vibe-Coding-CHOU-TZU-YANG)
+🔗 **儲存庫網址**：[//github.com/sarada0212/2025-Vibe-Coding-CHOU-TZU-YANG](https://github.com/sarada0212/2025-Vibe-Coding-CHOU-TZU-YANG)
