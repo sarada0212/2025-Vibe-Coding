@@ -1,3 +1,4 @@
+🔗 **網站線上預覽**：https://sarada0212.github.io/2025-Vibe-Coding-CHOU-TZU-YANG/
  2026 Vibe Coding 期末專案：簡易匯率計算器 (Currency Converter)
 1. 專題願景 (Design Philosophy & Vibe)
 
