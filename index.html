@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匯率計算器 | 簡單貨幣轉換工具</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- 漢堡選單 checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Exchange<span>Calc</span>.</a>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首頁</a></li>
+                <li><a href="#about" class="nav-link">關於匯率</a></li>
+                <li><a href="#calculator" class="nav-link">計算器</a></li>
+                <li><a href="#rates" class="nav-link">匯率表</a></li>
+            </ul>
+            
+            <!-- 漢堡按鈕 -->
+            <label for="menu-toggle" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>簡單匯率計算</h1>
+            <p>快速轉換常見貨幣，使用2026年1月4日最新匯率</p>
+            <a href="#calculator" class="btn btn-primary">開始計算</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container about-flex">
+                <div class="about-text">
+                    <h2 class="section-title">關於匯率</h2>
+                    <p class="subtitle">了解貨幣轉換基礎</p>
+                    <p>匯率是不同貨幣之間的兌換比率，受經濟因素影響。本計算器使用最新數據（基於中國銀行、Wise 等來源的2026年1月4日中間匯率），支援 TWD、USD、EUR、GBP、JPY、CNY。不需網路，即時計算。</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-chart-line"></i> 最新匯率，準確快速</li>
+                        <li><i class="fas fa-globe"></i> 支援6種常見貨幣</li>
+                        <li><i class="fas fa-calculator"></i> 雙向轉換，簡單易用</li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <img src="https://media.istockphoto.com/id/512041647/vector/money.jpg?s=612x612&w=0&k=20&c=XVXKvdD4wvlaCoE8Fv2OHr8h76_mDVAnHUGrYWB9ApU=" alt="抽象錢幣類型插圖">
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title center">匯率計算器</h2>
+                <p class="section-desc center">輸入金額、選擇貨幣，即時顯示結果</p>
+                
+                <div class="calculator-form">
+                    <label for="amount">金額：</label>
+                    <input type="number" id="amount" placeholder="輸入金額" min="0" step="0.01">
+                    
+                    <label for="from-currency">從：</label>
+                    <select id="from-currency">
+                        <option value="TWD">TWD (新台幣)</option>
+                        <option value="USD">USD (美元)</option>
+                        <option value="EUR">EUR (歐元)</option>
+                        <option value="GBP">GBP (英鎊)</option>
+                        <option value="JPY">JPY (日圓)</option>
+                        <option value="CNY">CNY (人民幣)</option>
+                    </select>
+                    
+                    <label for="to-currency">到：</label>
+                    <select id="to-currency">
+                        <option value="TWD">TWD (新台幣)</option>
+                        <option value="USD">USD (美元)</option>
+                        <option value="EUR">EUR (歐元)</option>
+                        <option value="GBP">GBP (英鎊)</option>
+                        <option value="JPY">JPY (日圓)</option>
+                        <option value="CNY">CNY (人民幣)</option>
+                    </select>
+                    
+                    <button id="calculate-btn" class="btn btn-primary">計算</button>
+                    
+                    <div id="result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rates" class="section">
+            <div class="container">
+                <h2 class="section-title center">最新匯率表</h2>
+                <p class="section-desc center">2026年1月4日匯率（以 TWD 為基準）</p>
+                
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="tag">USD</span>
+                            <h3>1 USD ≈ 31.50 TWD</h3>
+                            <p>美元對新台幣，適合美台貿易計算。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="tag">EUR</span>
+                            <h3>1 EUR ≈ 36.90 TWD</h3>
+                            <p>歐元對新台幣，歐洲旅遊必備。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="tag">GBP</span>
+                            <h3>1 GBP ≈ 42.27 TWD</h3>
+                            <p>英鎊對新台幣，英國購物參考。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="tag">JPY</span>
+                            <h3>1 JPY ≈ 0.20 TWD</h3>
+                            <p>日圓對新台幣，日本旅遊常用。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="tag">CNY</span>
+                            <h3>1 CNY ≈ 4.48 TWD</h3>
+                            <p>人民幣對新台幣，兩岸貿易參考。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Exchange<span>Calc</span>.</div>
+            <p>2026 Vibe Coding 期末作業 | Designed with 周子暘</p>
+        </div>
+    </footer>
+
+    <!-- 內嵌 JavaScript 計算邏輯（無外部 script.js） -->
+    <script>
+        // 靜態匯率（以 TWD 為基準：1 外幣 = x TWD，2026/1/4 更新）
+        const rates = {
+            'TWD': 1,
+            'USD': 31.50,
+            'EUR': 36.90,
+            'GBP': 42.27,
+            'JPY': 0.20,
+            'CNY': 4.48
+        };
+
+        document.getElementById('calculate-btn').addEventListener('click', () => {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('from-currency').value;
+            const toCurrency = document.getElementById('to-currency').value;
+            const resultDiv = document.getElementById('result');
+
+            if (isNaN(amount) || amount <= 0) {
+                resultDiv.innerHTML = '<p style="color: red;">請輸入有效金額！</p>';
+                return;
+            }
+
+            // 計算：amount (from) -> TWD -> to
+            const amountInTWD = amount * rates[fromCurrency];
+            const convertedAmount = amountInTWD / rates[toCurrency];
+            
+            resultDiv.innerHTML = `<p><strong>${amount} ${fromCurrency}</strong> ≈ <strong>${convertedAmount.toFixed(2)} ${toCurrency}</strong></p>`;
+        });
+    </script>
+</body>
+</html>
